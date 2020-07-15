@@ -16,21 +16,37 @@
 void rush(int x, int y)
 {
   char c;
-  int a =0;
-  while ( a < y)
+  int star =0;
+  unsigned int corner=0;
+
+  while ( star < y)
   {
-	  int b =0;
-      while ( b < x)
+	  int slash =0;
+      while ( slash < x)
 	  {
-        if ((a == 0 || a == y-1) && (b == 0 || b== x-1))
+        if ((star == 0 || star == y-1) && (slash == 0 || slash== x-1))
+        if(corner == 0){
+              cnr++;
+              sym = 'A';
+          } else if(corner == 1){
+              sym = 'A';
+              cnr ++;
+          } else if(corner == 2){
+              sym = 'C';
+              corner ++;
+          } else if(corner == 3){
+              sym = 'C';
+              corner = 0;
+
 		{
+
           c='/';
 		}
-        else if (a == 0 || a == y-1)
+        else if (star == 0 || star == y-1)
 		{
           c = '*';
 		}
-        else if (b ==0 || b == x-1)
+        else if (slash ==0 || slash == x-1)
 		{
           c = '*';
 		}
@@ -39,9 +55,9 @@ void rush(int x, int y)
 		   	c = ' ';
 		}
           ft_putchar(c);
-		  b++;
+		  slash++;
 	  }
-	  a++;
+	  star++;
       ft_putchar('\n');
   }
 }
