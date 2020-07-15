@@ -16,21 +16,21 @@
 void rush(int x, int y)
 {
   char c;
-  int a =0;
-  while ( a < y)
+  int q =0;
+  while ( q < y)
   {
-	  int b =0;
-      while ( b < x)
+	  int p =0;
+      while ( p < x)
 	  {
-        if ((a == 0 || a == y-1) && (b == 0 || b== x-1))
+        if ((q == 0 || q == y-1) && (p == 0 || p == x-1))
 		{
           c='o';
 		}
-        else if (a == 0 || a == y-1)
+        else if (q == 0 || q == y-1)
 		{
           c = '-';
 		}
-        else if (b ==0 || b == x-1)
+        else if (p ==0 || p == x-1)
 		{
           c = '|';
 		}
@@ -39,127 +39,9 @@ void rush(int x, int y)
 		   	c = ' ';
 		}
           ft_putchar(c);
-		  b++;
+		  p++;
 	  }
-	  a++;
+	  q++;
       ft_putchar('\n');
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//
-// #include	"ft_putchar.c"
-//
-// int ft_rush(void);
-//
-// void func1()
-// {
-// 	int		x='0';
-// 	char	d='o';
-// 	char	f='-';
-//
-// 	while(x>=1)
-// 	{
-// 		if(x==1||x==5)
-// 		{
-// 			ft_putchar(d);
-// 		}
-// 		else
-// 		{
-// 			if(x==1)
-// 			{
-// 			ft_putchar(f);
-// 			}
-// 		}
-// 		x--;
-// 	}
-// 	ft_putchar('\n');
-// }
-//
-// void func()
-// {
-// 		int y='0';
-// 		char m='|';
-// 		char n=' ';
-//
-// 		while(y>=1)
-// 		{
-// 			if(y==1||y==5)
-// 			{
-// 				ft_putchar(m);
-// 			}
-// 			else
-// 			{
-// 				ft_putchar(n);
-// 			}
-// 			y--;
-// 		}
-// }
-//
-/*
-{
-	char d,f,h,i;
-
-
-	d ='o';
-	f ='-';
-	h =' ';
-	i='|';
-
-	while(x>=1)
-	{
-		if(x==1||x==5)
-		{
-			ft_putchar(d);
-
-		}
-		else
-		{
-			ft_putchar(f);
-		}
-		x--;
-	}
-
-	while(y>1)
-	{
-		if(y==1||y==5 || y>1||y<5)
-		{
-			ft_putchar(f);
-			ft_putchar(h);
-		}
-		y--;
-	}
-
-
-
-	while(x>=1)
-	{
-		if(x==1||x==5)
-		{
-			ft_putchar(d);
-
-		}
-		else
-		{
-			ft_putchar(f);
-		}
-		x--;
-	}
-
-
-
-}
-*/
