@@ -12,16 +12,6 @@
 
 #include	"rush00.c"
 
-// int		main()
-// {
-// 	func1();
-// 	func();
-// 	func();
-// 	func1();
-// 	return(0);
-// 	//rush(5,5);
-// 	//return(0);
-// }
 void rush(int x, int y);
 int main(){
   rush(5,3);
